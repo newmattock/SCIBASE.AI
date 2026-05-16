@@ -1,0 +1,172 @@
+{
+  "generatedAt": "2026-05-16T15:00:00.000Z",
+  "policy": {
+    "criticalRiskThreshold": 80,
+    "highRiskThreshold": 55,
+    "projectHoldRiskThreshold": 55,
+    "trustedInstitutionDomains": ["miskatonic.edu", "northbridge-labs.org"],
+    "recentWindowHours": 72
+  },
+  "users": [
+    {
+      "id": "user-ada",
+      "name": "Ada Monroe",
+      "primaryEmail": "ada@miskatonic.edu",
+      "institutionDomain": "miskatonic.edu",
+      "mfa": { "enrolled": true, "backupCodesIssued": true, "lastVerifiedAt": "2026-05-01T12:00:00.000Z" },
+      "linkedIdentities": [
+        { "provider": "email", "subject": "ada@miskatonic.edu", "verified": true, "linkedAt": "2025-02-01T12:00:00.000Z" },
+        { "provider": "orcid", "subject": "0000-0002-1111-2222", "verified": true, "linkedAt": "2025-02-02T12:00:00.000Z" },
+        { "provider": "github", "subject": "ada-research", "verified": true, "linkedAt": "2025-02-03T12:00:00.000Z" },
+        { "provider": "saml", "subject": "ada@miskatonic.edu", "verified": true, "linkedAt": "2025-02-04T12:00:00.000Z" }
+      ]
+    },
+    {
+      "id": "user-lina",
+      "name": "Lina Kwan",
+      "primaryEmail": "lina@northbridge-labs.org",
+      "institutionDomain": "northbridge-labs.org",
+      "mfa": { "enrolled": true, "backupCodesIssued": true, "lastVerifiedAt": "2026-05-14T09:00:00.000Z" },
+      "linkedIdentities": [
+        { "provider": "email", "subject": "lina@northbridge-labs.org", "verified": true, "linkedAt": "2025-04-01T12:00:00.000Z" },
+        { "provider": "saml", "subject": "lina@northbridge-labs.org", "verified": true, "linkedAt": "2025-04-02T12:00:00.000Z" },
+        { "provider": "orcid", "subject": "0000-0003-3333-4444", "verified": true, "linkedAt": "2025-04-03T12:00:00.000Z" }
+      ]
+    },
+    {
+      "id": "user-omar",
+      "name": "Omar Silva",
+      "primaryEmail": "omar@example.org",
+      "institutionDomain": "example.org",
+      "mfa": { "enrolled": false, "backupCodesIssued": false, "lastVerifiedAt": null },
+      "linkedIdentities": [
+        { "provider": "email", "subject": "omar@example.org", "verified": true, "linkedAt": "2026-01-01T12:00:00.000Z" }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-quasar",
+      "title": "Quasar Proteomics Consortium",
+      "visibility": "institutional",
+      "sensitivity": "restricted",
+      "memberships": [
+        { "userId": "user-ada", "role": "owner" },
+        { "userId": "user-lina", "role": "reviewer" }
+      ],
+      "objectGrants": [
+        { "userId": "user-ada", "objectId": "dataset-raw-human", "action": "download", "sensitivity": "restricted" },
+        { "userId": "user-lina", "objectId": "notebook-qc", "action": "comment", "sensitivity": "internal" }
+      ]
+    },
+    {
+      "id": "project-atlas",
+      "title": "Atlas Methods Review",
+      "visibility": "private",
+      "sensitivity": "internal",
+      "memberships": [
+        { "userId": "user-lina", "role": "admin" },
+        { "userId": "user-omar", "role": "viewer" }
+      ],
+      "objectGrants": [
+        { "userId": "user-lina", "objectId": "review-notes", "action": "edit", "sensitivity": "internal" }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "id": "sess-ada-known",
+      "userId": "user-ada",
+      "startedAt": "2026-05-16T08:15:00.000Z",
+      "lastSeenAt": "2026-05-16T14:30:00.000Z",
+      "ipCountry": "US",
+      "deviceFingerprint": "macbook-lab-a",
+      "trustedDevice": true,
+      "assuranceLevel": "mfa"
+    },
+    {
+      "id": "sess-ada-new",
+      "userId": "user-ada",
+      "startedAt": "2026-05-16T13:45:00.000Z",
+      "lastSeenAt": "2026-05-16T14:45:00.000Z",
+      "ipCountry": "RO",
+      "deviceFingerprint": "unknown-browser-77",
+      "trustedDevice": false,
+      "assuranceLevel": "password"
+    },
+    {
+      "id": "sess-lina-known",
+      "userId": "user-lina",
+      "startedAt": "2026-05-16T11:20:00.000Z",
+      "lastSeenAt": "2026-05-16T14:55:00.000Z",
+      "ipCountry": "US",
+      "deviceFingerprint": "northbridge-managed-2",
+      "trustedDevice": true,
+      "assuranceLevel": "mfa"
+    },
+    {
+      "id": "sess-omar-known",
+      "userId": "user-omar",
+      "startedAt": "2026-05-15T17:00:00.000Z",
+      "lastSeenAt": "2026-05-16T10:00:00.000Z",
+      "ipCountry": "US",
+      "deviceFingerprint": "home-laptop",
+      "trustedDevice": true,
+      "assuranceLevel": "password"
+    }
+  ],
+  "authEvents": [
+    { "userId": "user-ada", "type": "failed_login", "at": "2026-05-16T12:52:00.000Z", "ipCountry": "RO", "deviceFingerprint": "unknown-browser-77", "success": false },
+    { "userId": "user-ada", "type": "failed_login", "at": "2026-05-16T12:54:00.000Z", "ipCountry": "RO", "deviceFingerprint": "unknown-browser-77", "success": false },
+    { "userId": "user-ada", "type": "failed_login", "at": "2026-05-16T12:58:00.000Z", "ipCountry": "RO", "deviceFingerprint": "unknown-browser-77", "success": false },
+    { "userId": "user-ada", "type": "provider_unlinked", "at": "2026-05-16T13:18:00.000Z", "ipCountry": "RO", "deviceFingerprint": "unknown-browser-77", "provider": "github", "success": true },
+    { "userId": "user-lina", "type": "saml_assertion_changed", "at": "2026-05-16T14:05:00.000Z", "ipCountry": "US", "deviceFingerprint": "northbridge-managed-2", "provider": "saml", "success": true },
+    { "userId": "user-omar", "type": "password_reset_requested", "at": "2026-05-16T09:20:00.000Z", "ipCountry": "US", "deviceFingerprint": "home-laptop", "success": true }
+  ],
+  "recoveryRequests": [
+    {
+      "id": "rec-ada-mfa-reset",
+      "userId": "user-ada",
+      "type": "mfa_reset",
+      "requestedAt": "2026-05-16T14:50:00.000Z",
+      "source": { "ipCountry": "RO", "deviceFingerprint": "unknown-browser-77" },
+      "evidence": {
+        "emailVerified": false,
+        "institutionalAdminApproved": false,
+        "mfaBackupCode": false,
+        "orcidReverified": false,
+        "deviceTrusted": false
+      }
+    },
+    {
+      "id": "rec-lina-saml-rebind",
+      "userId": "user-lina",
+      "type": "saml_rebind",
+      "requestedAt": "2026-05-16T14:35:00.000Z",
+      "targetProvider": "saml",
+      "targetSubject": "lina@contractor-mail.example",
+      "source": { "ipCountry": "US", "deviceFingerprint": "northbridge-managed-2" },
+      "evidence": {
+        "emailVerified": true,
+        "institutionalAdminApproved": false,
+        "mfaBackupCode": true,
+        "orcidReverified": true,
+        "deviceTrusted": true
+      }
+    },
+    {
+      "id": "rec-omar-password",
+      "userId": "user-omar",
+      "type": "password_reset",
+      "requestedAt": "2026-05-16T10:05:00.000Z",
+      "source": { "ipCountry": "US", "deviceFingerprint": "home-laptop" },
+      "evidence": {
+        "emailVerified": true,
+        "institutionalAdminApproved": false,
+        "mfaBackupCode": false,
+        "orcidReverified": false,
+        "deviceTrusted": true
+      }
+    }
+  ]
+}

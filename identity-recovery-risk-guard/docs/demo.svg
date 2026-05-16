@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Identity Recovery Risk Guard demo</title>
+  <desc id="desc">Synthetic recovery requests are scored before sensitive project access is restored.</desc>
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <rect x="0" y="0" width="960" height="82" fill="#0f172a"/>
+  <text x="44" y="52" fill="#ffffff" font-family="Arial, sans-serif" font-size="30" font-weight="700">Identity Recovery Risk Guard</text>
+  <text x="44" y="104" fill="#334155" font-family="Arial, sans-serif" font-size="16">Account recovery is checked against MFA evidence, sessions, linked identities, and project exposure.</text>
+  <rect x="42" y="138" width="258" height="138" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="66" y="178" fill="#1e3a8a" font-family="Arial, sans-serif" font-size="22" font-weight="700">Recovery request</text>
+  <text x="66" y="214" fill="#1e3a8a" font-family="Arial, sans-serif" font-size="17">MFA reset</text>
+  <text x="66" y="240" fill="#1e3a8a" font-family="Arial, sans-serif" font-size="17">SAML rebind</text>
+  <rect x="351" y="138" width="258" height="138" rx="8" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+  <text x="375" y="178" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="22" font-weight="700">Risk factors</text>
+  <text x="375" y="214" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="17">New device</text>
+  <text x="375" y="240" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="17">Domain mismatch</text>
+  <rect x="660" y="138" width="258" height="138" rx="8" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="684" y="178" fill="#14532d" font-family="Arial, sans-serif" font-size="22" font-weight="700">Access decision</text>
+  <text x="684" y="214" fill="#14532d" font-family="Arial, sans-serif" font-size="17">Hold recovery</text>
+  <text x="684" y="240" fill="#14532d" font-family="Arial, sans-serif" font-size="17">Freeze sensitive grants</text>
+  <line x1="306" y1="207" x2="344" y2="207" stroke="#64748b" stroke-width="4"/>
+  <line x1="615" y1="207" x2="653" y2="207" stroke="#64748b" stroke-width="4"/>
+  <rect x="64" y="338" width="832" height="74" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="92" y="383" fill="#0f172a" font-family="Arial, sans-serif" font-size="24" font-weight="700">Audit digest</text>
+  <text x="270" y="383" fill="#475569" font-family="Arial, sans-serif" font-size="22">risk score, recovery packet, session action, project hold</text>
+  <rect x="64" y="442" width="832" height="18" rx="9" fill="#b91c1c"/>
+</svg>

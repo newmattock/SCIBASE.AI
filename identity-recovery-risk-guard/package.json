@@ -1,0 +1,12 @@
+{
+  "name": "identity-recovery-risk-guard",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "node --check src/identity-recovery-risk-guard.js && node --check scripts/demo.js && node --check scripts/write-demo-gif.js && node --check test/identity-recovery-risk-guard.test.js",
+    "test": "node --test test/identity-recovery-risk-guard.test.js",
+    "demo": "node scripts/demo.js",
+    "demo:gif": "node scripts/write-demo-gif.js"
+  }
+}
