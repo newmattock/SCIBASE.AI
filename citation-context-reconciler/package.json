@@ -1,0 +1,15 @@
+{
+  "name": "citation-context-reconciler",
+  "version": "1.0.0",
+  "description": "Citation-context reconciliation assistant for SCIBASE AI-powered research workflows.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node test/citation-context-reconciler.test.js",
+    "demo": "node scripts/demo.js",
+    "demo:video": "mkdir -p docs && clang -fobjc-arc -framework Foundation -framework AppKit -framework AVFoundation -framework CoreMedia -framework CoreVideo scripts/render-demo-video.m -o /tmp/citation-context-demo && /tmp/citation-context-demo docs/demo.mp4"
+  },
+  "exports": {
+    ".": "./src/citation-context-reconciler.js"
+  }
+}

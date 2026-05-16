@@ -1,0 +1,697 @@
+{
+  "ready": false,
+  "counts": {
+    "claims": 3,
+    "sources": 4,
+    "blockers": 5,
+    "warnings": 6,
+    "opportunities": 2
+  },
+  "findings": [
+    {
+      "severity": "blocker",
+      "code": "contradicting-source-used-as-support",
+      "claimId": "claim-cytokine-recovery",
+      "section": "Results",
+      "sourceIds": [
+        "src-recent-null-meta"
+      ],
+      "message": "src-recent-null-meta (2025) contradicts the claim but is cited without a limitation note.",
+      "task": "Move the source into a limitation sentence or add a rebuttal-backed explanation."
+    },
+    {
+      "severity": "blocker",
+      "code": "contradictory-cited-effects",
+      "claimId": "claim-cytokine-recovery",
+      "section": "Results",
+      "sourceIds": [
+        "src-legacy-pacing",
+        "src-recent-null-meta"
+      ],
+      "message": "The cited sources disagree on effect direction: lower, no-effect.",
+      "task": "Rewrite the claim as contested or add an adjudication note explaining why one direction is preferred."
+    },
+    {
+      "severity": "blocker",
+      "code": "effect-direction-mismatch",
+      "claimId": "claim-cytokine-recovery",
+      "section": "Results",
+      "sourceIds": [
+        "src-recent-null-meta"
+      ],
+      "message": "src-recent-null-meta (2025) has effect direction no-effect, but the claim states lower.",
+      "task": "Align the claim with the source or cite a direct source for the stated effect direction."
+    },
+    {
+      "severity": "blocker",
+      "code": "citation-intent-mismatch",
+      "claimId": "claim-pipeline-reproducible",
+      "section": "Methods",
+      "sourceIds": [
+        "src-workflow-note"
+      ],
+      "message": "src-workflow-note (2026) is tagged for method, not direct evidence.",
+      "task": "Use the citation as context only or replace it with a direct empirical support source."
+    },
+    {
+      "severity": "blocker",
+      "code": "citation-intent-mismatch",
+      "claimId": "claim-scrna-pathway",
+      "section": "Discussion",
+      "sourceIds": [
+        "src-scrna-review"
+      ],
+      "message": "src-scrna-review (2022) is tagged for background, not direct evidence.",
+      "task": "Use the citation as context only or replace it with a direct empirical support source."
+    },
+    {
+      "severity": "warning",
+      "code": "population-context-gap",
+      "claimId": "claim-cytokine-recovery",
+      "section": "Results",
+      "sourceIds": [
+        "src-legacy-pacing"
+      ],
+      "message": "src-legacy-pacing (2014) does not cover the claim population: older-adults, post-viral-fatigue.",
+      "task": "Add population-matched evidence or narrow the claim."
+    },
+    {
+      "severity": "warning",
+      "code": "reproducibility-evidence-gap",
+      "claimId": "claim-cytokine-recovery",
+      "section": "Results",
+      "sourceIds": [
+        "src-legacy-pacing"
+      ],
+      "message": "src-legacy-pacing (2014) is missing reproducibility evidence: code, protocol.",
+      "task": "Link the missing artifacts or lower the reproducibility confidence for this claim."
+    },
+    {
+      "severity": "warning",
+      "code": "stale-citation",
+      "claimId": "claim-cytokine-recovery",
+      "section": "Results",
+      "sourceIds": [
+        "src-legacy-pacing"
+      ],
+      "message": "src-legacy-pacing (2014) is older than the configured 7-year recency window.",
+      "task": "Run a recency search and add a current synthesis or explain why the older source is canonical."
+    },
+    {
+      "severity": "warning",
+      "code": "reproducibility-evidence-gap",
+      "claimId": "claim-pipeline-reproducible",
+      "section": "Methods",
+      "sourceIds": [
+        "src-workflow-note"
+      ],
+      "message": "src-workflow-note (2026) is missing reproducibility evidence: raw data, protocol.",
+      "task": "Link the missing artifacts or lower the reproducibility confidence for this claim."
+    },
+    {
+      "severity": "warning",
+      "code": "mixed-source-needs-qualification",
+      "claimId": "claim-scrna-pathway",
+      "section": "Discussion",
+      "sourceIds": [
+        "src-scrna-review"
+      ],
+      "message": "src-scrna-review (2022) reports mixed evidence and needs qualified language.",
+      "task": "Add uncertainty language and identify which subgroup or assay is supported."
+    },
+    {
+      "severity": "warning",
+      "code": "population-context-gap",
+      "claimId": "claim-scrna-pathway",
+      "section": "Discussion",
+      "sourceIds": [
+        "src-scrna-review"
+      ],
+      "message": "src-scrna-review (2022) does not cover the claim population: post-viral-fatigue.",
+      "task": "Add population-matched evidence or narrow the claim."
+    }
+  ],
+  "reviewerQueue": [
+    {
+      "claimId": "claim-cytokine-recovery",
+      "section": "Results",
+      "severity": "blocker",
+      "body": "Resolve before release: src-recent-null-meta (2025) contradicts the claim but is cited without a limitation note."
+    },
+    {
+      "claimId": "claim-cytokine-recovery",
+      "section": "Results",
+      "severity": "blocker",
+      "body": "Resolve before release: The cited sources disagree on effect direction: lower, no-effect."
+    },
+    {
+      "claimId": "claim-cytokine-recovery",
+      "section": "Results",
+      "severity": "blocker",
+      "body": "Resolve before release: src-recent-null-meta (2025) has effect direction no-effect, but the claim states lower."
+    },
+    {
+      "claimId": "claim-pipeline-reproducible",
+      "section": "Methods",
+      "severity": "blocker",
+      "body": "Resolve before release: src-workflow-note (2026) is tagged for method, not direct evidence."
+    },
+    {
+      "claimId": "claim-scrna-pathway",
+      "section": "Discussion",
+      "severity": "blocker",
+      "body": "Resolve before release: src-scrna-review (2022) is tagged for background, not direct evidence."
+    },
+    {
+      "claimId": "claim-cytokine-recovery",
+      "section": "Results",
+      "severity": "warning",
+      "body": "Review before submission: src-legacy-pacing (2014) does not cover the claim population: older-adults, post-viral-fatigue."
+    },
+    {
+      "claimId": "claim-cytokine-recovery",
+      "section": "Results",
+      "severity": "warning",
+      "body": "Review before submission: src-legacy-pacing (2014) is missing reproducibility evidence: code, protocol."
+    },
+    {
+      "claimId": "claim-cytokine-recovery",
+      "section": "Results",
+      "severity": "warning",
+      "body": "Review before submission: src-legacy-pacing (2014) is older than the configured 7-year recency window."
+    },
+    {
+      "claimId": "claim-pipeline-reproducible",
+      "section": "Methods",
+      "severity": "warning",
+      "body": "Review before submission: src-workflow-note (2026) is missing reproducibility evidence: raw data, protocol."
+    },
+    {
+      "claimId": "claim-scrna-pathway",
+      "section": "Discussion",
+      "severity": "warning",
+      "body": "Review before submission: src-scrna-review (2022) reports mixed evidence and needs qualified language."
+    },
+    {
+      "claimId": "claim-scrna-pathway",
+      "section": "Discussion",
+      "severity": "warning",
+      "body": "Review before submission: src-scrna-review (2022) does not cover the claim population: post-viral-fatigue."
+    }
+  ],
+  "revisionTasks": [
+    {
+      "claimId": "claim-cytokine-recovery",
+      "code": "contradicting-source-used-as-support",
+      "ownerHint": "author",
+      "task": "Move the source into a limitation sentence or add a rebuttal-backed explanation."
+    },
+    {
+      "claimId": "claim-cytokine-recovery",
+      "code": "contradictory-cited-effects",
+      "ownerHint": "author",
+      "task": "Rewrite the claim as contested or add an adjudication note explaining why one direction is preferred."
+    },
+    {
+      "claimId": "claim-cytokine-recovery",
+      "code": "effect-direction-mismatch",
+      "ownerHint": "author",
+      "task": "Align the claim with the source or cite a direct source for the stated effect direction."
+    },
+    {
+      "claimId": "claim-pipeline-reproducible",
+      "code": "citation-intent-mismatch",
+      "ownerHint": "author",
+      "task": "Use the citation as context only or replace it with a direct empirical support source."
+    },
+    {
+      "claimId": "claim-scrna-pathway",
+      "code": "citation-intent-mismatch",
+      "ownerHint": "author",
+      "task": "Use the citation as context only or replace it with a direct empirical support source."
+    },
+    {
+      "claimId": "claim-cytokine-recovery",
+      "code": "population-context-gap",
+      "ownerHint": "reviewer",
+      "task": "Add population-matched evidence or narrow the claim."
+    },
+    {
+      "claimId": "claim-cytokine-recovery",
+      "code": "reproducibility-evidence-gap",
+      "ownerHint": "reviewer",
+      "task": "Link the missing artifacts or lower the reproducibility confidence for this claim."
+    },
+    {
+      "claimId": "claim-cytokine-recovery",
+      "code": "stale-citation",
+      "ownerHint": "reviewer",
+      "task": "Run a recency search and add a current synthesis or explain why the older source is canonical."
+    },
+    {
+      "claimId": "claim-pipeline-reproducible",
+      "code": "reproducibility-evidence-gap",
+      "ownerHint": "reviewer",
+      "task": "Link the missing artifacts or lower the reproducibility confidence for this claim."
+    },
+    {
+      "claimId": "claim-scrna-pathway",
+      "code": "mixed-source-needs-qualification",
+      "ownerHint": "reviewer",
+      "task": "Add uncertainty language and identify which subgroup or assay is supported."
+    },
+    {
+      "claimId": "claim-scrna-pathway",
+      "code": "population-context-gap",
+      "ownerHint": "reviewer",
+      "task": "Add population-matched evidence or narrow the claim."
+    }
+  ],
+  "citationMatrix": [
+    {
+      "claimId": "claim-cytokine-recovery",
+      "section": "Results",
+      "citedSources": [
+        {
+          "id": "src-legacy-pacing",
+          "stance": "supports",
+          "intent": "evidence",
+          "effectDirection": "lower",
+          "methodOverlap": [
+            "cytokine-panel"
+          ],
+          "populationOverlap": [],
+          "reproducibilityEvidence": {
+            "rawData": true,
+            "code": false,
+            "protocol": false
+          }
+        },
+        {
+          "id": "src-recent-null-meta",
+          "stance": "contradicts",
+          "intent": "limitation",
+          "effectDirection": "no-effect",
+          "methodOverlap": [
+            "wearable-sensor-cohort",
+            "cytokine-panel"
+          ],
+          "populationOverlap": [
+            "older-adults",
+            "post-viral-fatigue"
+          ],
+          "reproducibilityEvidence": {
+            "rawData": true,
+            "code": true,
+            "protocol": true
+          }
+        }
+      ]
+    },
+    {
+      "claimId": "claim-scrna-pathway",
+      "section": "Discussion",
+      "citedSources": [
+        {
+          "id": "src-scrna-review",
+          "stance": "mixed",
+          "intent": "background",
+          "effectDirection": "mixed",
+          "methodOverlap": [
+            "single-cell-rna-seq"
+          ],
+          "populationOverlap": [],
+          "reproducibilityEvidence": {
+            "rawData": false,
+            "code": false,
+            "protocol": false
+          }
+        }
+      ]
+    },
+    {
+      "claimId": "claim-pipeline-reproducible",
+      "section": "Methods",
+      "citedSources": [
+        {
+          "id": "src-workflow-note",
+          "stance": "supports",
+          "intent": "method",
+          "effectDirection": "unknown",
+          "methodOverlap": [
+            "open-analysis-pipeline"
+          ],
+          "populationOverlap": [
+            "post-viral-fatigue"
+          ],
+          "reproducibilityEvidence": {
+            "rawData": false,
+            "code": true,
+            "protocol": false
+          }
+        }
+      ]
+    }
+  ],
+  "reproducibility": {
+    "score": 50,
+    "claims": [
+      {
+        "claimId": "claim-cytokine-recovery",
+        "score": 67,
+        "required": true
+      },
+      {
+        "claimId": "claim-scrna-pathway",
+        "score": 0,
+        "required": false
+      },
+      {
+        "claimId": "claim-pipeline-reproducible",
+        "score": 33,
+        "required": true
+      }
+    ],
+    "confidence": "low"
+  },
+  "opportunityFeed": [
+    {
+      "id": "gap-older-adult-replication",
+      "title": "Replicate pacing cytokine effects in older wearable cohorts",
+      "priority": 17,
+      "capabilityOverlap": [
+        "wearable-sensor-cohort",
+        "open-analysis-pipeline"
+      ],
+      "interestOverlap": [
+        "post-viral-fatigue",
+        "cytokine-signaling",
+        "replication"
+      ],
+      "linkedBlockers": [
+        "claim-cytokine-recovery"
+      ],
+      "nextAction": "Run a preregistered replication with age-stratified cytokine endpoints."
+    },
+    {
+      "id": "gap-crispr-validation",
+      "title": "Validate single-cell pathway claims with direct CRISPR evidence",
+      "priority": 11,
+      "capabilityOverlap": [
+        "single-cell-rna-seq"
+      ],
+      "interestOverlap": [
+        "cytokine-signaling",
+        "replication"
+      ],
+      "linkedBlockers": [
+        "claim-scrna-pathway"
+      ],
+      "nextAction": "Search for direct perturbation studies or mark the pathway as hypothesis-generating."
+    }
+  ],
+  "exportPacket": {
+    "projectId": "scibase-ms-42",
+    "generatedAt": "2026-05-16T18:20:00.000Z",
+    "citationMatrix": [
+      {
+        "claimId": "claim-cytokine-recovery",
+        "section": "Results",
+        "citedSources": [
+          {
+            "id": "src-legacy-pacing",
+            "stance": "supports",
+            "intent": "evidence",
+            "effectDirection": "lower",
+            "methodOverlap": [
+              "cytokine-panel"
+            ],
+            "populationOverlap": [],
+            "reproducibilityEvidence": {
+              "rawData": true,
+              "code": false,
+              "protocol": false
+            }
+          },
+          {
+            "id": "src-recent-null-meta",
+            "stance": "contradicts",
+            "intent": "limitation",
+            "effectDirection": "no-effect",
+            "methodOverlap": [
+              "wearable-sensor-cohort",
+              "cytokine-panel"
+            ],
+            "populationOverlap": [
+              "older-adults",
+              "post-viral-fatigue"
+            ],
+            "reproducibilityEvidence": {
+              "rawData": true,
+              "code": true,
+              "protocol": true
+            }
+          }
+        ]
+      },
+      {
+        "claimId": "claim-scrna-pathway",
+        "section": "Discussion",
+        "citedSources": [
+          {
+            "id": "src-scrna-review",
+            "stance": "mixed",
+            "intent": "background",
+            "effectDirection": "mixed",
+            "methodOverlap": [
+              "single-cell-rna-seq"
+            ],
+            "populationOverlap": [],
+            "reproducibilityEvidence": {
+              "rawData": false,
+              "code": false,
+              "protocol": false
+            }
+          }
+        ]
+      },
+      {
+        "claimId": "claim-pipeline-reproducible",
+        "section": "Methods",
+        "citedSources": [
+          {
+            "id": "src-workflow-note",
+            "stance": "supports",
+            "intent": "method",
+            "effectDirection": "unknown",
+            "methodOverlap": [
+              "open-analysis-pipeline"
+            ],
+            "populationOverlap": [
+              "post-viral-fatigue"
+            ],
+            "reproducibilityEvidence": {
+              "rawData": false,
+              "code": true,
+              "protocol": false
+            }
+          }
+        ]
+      }
+    ],
+    "reviewerQueue": [
+      {
+        "claimId": "claim-cytokine-recovery",
+        "section": "Results",
+        "severity": "blocker",
+        "body": "Resolve before release: src-recent-null-meta (2025) contradicts the claim but is cited without a limitation note."
+      },
+      {
+        "claimId": "claim-cytokine-recovery",
+        "section": "Results",
+        "severity": "blocker",
+        "body": "Resolve before release: The cited sources disagree on effect direction: lower, no-effect."
+      },
+      {
+        "claimId": "claim-cytokine-recovery",
+        "section": "Results",
+        "severity": "blocker",
+        "body": "Resolve before release: src-recent-null-meta (2025) has effect direction no-effect, but the claim states lower."
+      },
+      {
+        "claimId": "claim-pipeline-reproducible",
+        "section": "Methods",
+        "severity": "blocker",
+        "body": "Resolve before release: src-workflow-note (2026) is tagged for method, not direct evidence."
+      },
+      {
+        "claimId": "claim-scrna-pathway",
+        "section": "Discussion",
+        "severity": "blocker",
+        "body": "Resolve before release: src-scrna-review (2022) is tagged for background, not direct evidence."
+      },
+      {
+        "claimId": "claim-cytokine-recovery",
+        "section": "Results",
+        "severity": "warning",
+        "body": "Review before submission: src-legacy-pacing (2014) does not cover the claim population: older-adults, post-viral-fatigue."
+      },
+      {
+        "claimId": "claim-cytokine-recovery",
+        "section": "Results",
+        "severity": "warning",
+        "body": "Review before submission: src-legacy-pacing (2014) is missing reproducibility evidence: code, protocol."
+      },
+      {
+        "claimId": "claim-cytokine-recovery",
+        "section": "Results",
+        "severity": "warning",
+        "body": "Review before submission: src-legacy-pacing (2014) is older than the configured 7-year recency window."
+      },
+      {
+        "claimId": "claim-pipeline-reproducible",
+        "section": "Methods",
+        "severity": "warning",
+        "body": "Review before submission: src-workflow-note (2026) is missing reproducibility evidence: raw data, protocol."
+      },
+      {
+        "claimId": "claim-scrna-pathway",
+        "section": "Discussion",
+        "severity": "warning",
+        "body": "Review before submission: src-scrna-review (2022) reports mixed evidence and needs qualified language."
+      },
+      {
+        "claimId": "claim-scrna-pathway",
+        "section": "Discussion",
+        "severity": "warning",
+        "body": "Review before submission: src-scrna-review (2022) does not cover the claim population: post-viral-fatigue."
+      }
+    ],
+    "revisionTasks": [
+      {
+        "claimId": "claim-cytokine-recovery",
+        "code": "contradicting-source-used-as-support",
+        "ownerHint": "author",
+        "task": "Move the source into a limitation sentence or add a rebuttal-backed explanation."
+      },
+      {
+        "claimId": "claim-cytokine-recovery",
+        "code": "contradictory-cited-effects",
+        "ownerHint": "author",
+        "task": "Rewrite the claim as contested or add an adjudication note explaining why one direction is preferred."
+      },
+      {
+        "claimId": "claim-cytokine-recovery",
+        "code": "effect-direction-mismatch",
+        "ownerHint": "author",
+        "task": "Align the claim with the source or cite a direct source for the stated effect direction."
+      },
+      {
+        "claimId": "claim-pipeline-reproducible",
+        "code": "citation-intent-mismatch",
+        "ownerHint": "author",
+        "task": "Use the citation as context only or replace it with a direct empirical support source."
+      },
+      {
+        "claimId": "claim-scrna-pathway",
+        "code": "citation-intent-mismatch",
+        "ownerHint": "author",
+        "task": "Use the citation as context only or replace it with a direct empirical support source."
+      },
+      {
+        "claimId": "claim-cytokine-recovery",
+        "code": "population-context-gap",
+        "ownerHint": "reviewer",
+        "task": "Add population-matched evidence or narrow the claim."
+      },
+      {
+        "claimId": "claim-cytokine-recovery",
+        "code": "reproducibility-evidence-gap",
+        "ownerHint": "reviewer",
+        "task": "Link the missing artifacts or lower the reproducibility confidence for this claim."
+      },
+      {
+        "claimId": "claim-cytokine-recovery",
+        "code": "stale-citation",
+        "ownerHint": "reviewer",
+        "task": "Run a recency search and add a current synthesis or explain why the older source is canonical."
+      },
+      {
+        "claimId": "claim-pipeline-reproducible",
+        "code": "reproducibility-evidence-gap",
+        "ownerHint": "reviewer",
+        "task": "Link the missing artifacts or lower the reproducibility confidence for this claim."
+      },
+      {
+        "claimId": "claim-scrna-pathway",
+        "code": "mixed-source-needs-qualification",
+        "ownerHint": "reviewer",
+        "task": "Add uncertainty language and identify which subgroup or assay is supported."
+      },
+      {
+        "claimId": "claim-scrna-pathway",
+        "code": "population-context-gap",
+        "ownerHint": "reviewer",
+        "task": "Add population-matched evidence or narrow the claim."
+      }
+    ],
+    "reproducibility": {
+      "score": 50,
+      "claims": [
+        {
+          "claimId": "claim-cytokine-recovery",
+          "score": 67,
+          "required": true
+        },
+        {
+          "claimId": "claim-scrna-pathway",
+          "score": 0,
+          "required": false
+        },
+        {
+          "claimId": "claim-pipeline-reproducible",
+          "score": 33,
+          "required": true
+        }
+      ],
+      "confidence": "low"
+    },
+    "opportunityFeed": [
+      {
+        "id": "gap-older-adult-replication",
+        "title": "Replicate pacing cytokine effects in older wearable cohorts",
+        "priority": 17,
+        "capabilityOverlap": [
+          "wearable-sensor-cohort",
+          "open-analysis-pipeline"
+        ],
+        "interestOverlap": [
+          "post-viral-fatigue",
+          "cytokine-signaling",
+          "replication"
+        ],
+        "linkedBlockers": [
+          "claim-cytokine-recovery"
+        ],
+        "nextAction": "Run a preregistered replication with age-stratified cytokine endpoints."
+      },
+      {
+        "id": "gap-crispr-validation",
+        "title": "Validate single-cell pathway claims with direct CRISPR evidence",
+        "priority": 11,
+        "capabilityOverlap": [
+          "single-cell-rna-seq"
+        ],
+        "interestOverlap": [
+          "cytokine-signaling",
+          "replication"
+        ],
+        "linkedBlockers": [
+          "claim-scrna-pathway"
+        ],
+        "nextAction": "Search for direct perturbation studies or mark the pathway as hypothesis-generating."
+      }
+    ],
+    "auditDigest": "citation-context:5:6:c4998c5dea561415"
+  }
+}

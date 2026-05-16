@@ -1,0 +1,128 @@
+{
+  "generatedAt": "2026-05-16T18:20:00.000Z",
+  "project": {
+    "id": "scibase-ms-42",
+    "title": "Immune signatures in wearable-guided recovery cohorts",
+    "field": "translational immunology"
+  },
+  "lab": {
+    "capabilities": ["single-cell-rna-seq", "wearable-sensor-cohort", "open-analysis-pipeline"],
+    "interests": ["post-viral-fatigue", "cytokine-signaling", "replication"]
+  },
+  "claims": [
+    {
+      "id": "claim-cytokine-recovery",
+      "section": "Results",
+      "text": "Wearable-guided pacing lowers inflammatory cytokine burden in older post-viral recovery cohorts.",
+      "citedSourceIds": ["src-legacy-pacing", "src-recent-null-meta"],
+      "methodTags": ["wearable-sensor-cohort", "cytokine-panel"],
+      "populations": ["older-adults", "post-viral-fatigue"],
+      "effectDirection": "lower",
+      "usesCitationAs": "evidence",
+      "requiresCurrentEvidence": true,
+      "requiresReproducibilityEvidence": true
+    },
+    {
+      "id": "claim-scrna-pathway",
+      "section": "Discussion",
+      "text": "Single-cell CRISPR screens identify the same cytokine pathway as causal.",
+      "citedSourceIds": ["src-scrna-review"],
+      "methodTags": ["single-cell-rna-seq", "crispr-screen"],
+      "populations": ["post-viral-fatigue"],
+      "effectDirection": "higher",
+      "usesCitationAs": "evidence",
+      "requiresCurrentEvidence": true,
+      "requiresReproducibilityEvidence": false
+    },
+    {
+      "id": "claim-pipeline-reproducible",
+      "section": "Methods",
+      "text": "The analysis pipeline is fully reproducible from raw data and registered protocols.",
+      "citedSourceIds": ["src-workflow-note"],
+      "methodTags": ["open-analysis-pipeline"],
+      "populations": ["post-viral-fatigue"],
+      "effectDirection": "unknown",
+      "usesCitationAs": "evidence",
+      "requiresCurrentEvidence": false,
+      "requiresReproducibilityEvidence": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-legacy-pacing",
+      "title": "Small pilot of pacing interventions after viral illness",
+      "year": 2014,
+      "stance": "supports",
+      "citationIntent": "evidence",
+      "effectDirection": "lower",
+      "methodTags": ["cytokine-panel"],
+      "populations": ["young-adults"],
+      "hasRawData": true,
+      "hasCode": false,
+      "hasProtocol": false,
+      "retracted": false
+    },
+    {
+      "id": "src-recent-null-meta",
+      "title": "Meta-analysis of pacing and cytokine biomarkers",
+      "year": 2025,
+      "stance": "contradicts",
+      "citationIntent": "limitation",
+      "effectDirection": "no-effect",
+      "methodTags": ["wearable-sensor-cohort", "cytokine-panel"],
+      "populations": ["older-adults", "post-viral-fatigue"],
+      "hasRawData": true,
+      "hasCode": true,
+      "hasProtocol": true,
+      "retracted": false
+    },
+    {
+      "id": "src-scrna-review",
+      "title": "Review of single-cell immune atlas methods",
+      "year": 2022,
+      "stance": "mixed",
+      "citationIntent": "background",
+      "effectDirection": "mixed",
+      "methodTags": ["single-cell-rna-seq"],
+      "populations": ["autoimmune-disease"],
+      "hasRawData": false,
+      "hasCode": false,
+      "hasProtocol": false,
+      "retracted": false
+    },
+    {
+      "id": "src-workflow-note",
+      "title": "Internal workflow note for cohort preprocessing",
+      "year": 2026,
+      "stance": "supports",
+      "citationIntent": "method",
+      "effectDirection": "unknown",
+      "methodTags": ["open-analysis-pipeline"],
+      "populations": ["post-viral-fatigue"],
+      "hasRawData": false,
+      "hasCode": true,
+      "hasProtocol": false,
+      "retracted": false
+    }
+  ],
+  "corpusGaps": [
+    {
+      "id": "gap-older-adult-replication",
+      "title": "Replicate pacing cytokine effects in older wearable cohorts",
+      "topicTags": ["post-viral-fatigue", "cytokine-signaling", "replication"],
+      "requiredCapabilities": ["wearable-sensor-cohort", "open-analysis-pipeline"],
+      "linkedClaimIds": ["claim-cytokine-recovery"],
+      "contradictionSignals": ["recent-null-meta-analysis", "population-mismatch"],
+      "nextAction": "Run a preregistered replication with age-stratified cytokine endpoints."
+    },
+    {
+      "id": "gap-crispr-validation",
+      "title": "Validate single-cell pathway claims with direct CRISPR evidence",
+      "topicTags": ["cytokine-signaling", "replication"],
+      "requiredCapabilities": ["single-cell-rna-seq"],
+      "linkedClaimIds": ["claim-scrna-pathway"],
+      "contradictionSignals": ["background-only-citation"],
+      "nextAction": "Search for direct perturbation studies or mark the pathway as hypothesis-generating."
+    }
+  ]
+}
