@@ -1,0 +1,135 @@
+{
+  "repositoryId": "neuro-lab/sleep-spindle-atlas",
+  "title": "Sleep Spindle Atlas With Reproducible Notebook Outputs",
+  "semanticVersion": "1.2.0",
+  "tag": "preprint-v1.2",
+  "doi": "10.5555/scibase.sleep-spindle-atlas.v1.2",
+  "citation": "Rivera, M.; Chen, I.; Okafor, T. (2026). Sleep Spindle Atlas With Reproducible Notebook Outputs. SCIBASE.AI.",
+  "authors": [
+    {
+      "name": "Mira Rivera",
+      "orcid": "0000-0002-1000-0001",
+      "affiliation": "North Coast Neuroscience Lab"
+    },
+    {
+      "name": "Isaac Chen",
+      "orcid": "0000-0002-1000-0002",
+      "affiliation": "North Coast Neuroscience Lab"
+    }
+  ],
+  "funding": [
+    {
+      "funder": "Open Sleep Foundation",
+      "grant": "OSF-2026-17"
+    }
+  ],
+  "metadata": {
+    "schemaOrgType": "Dataset",
+    "license": "CC-BY-4.0",
+    "keywords": ["sleep", "eeg", "spindles", "reproducibility"]
+  },
+  "reproducibility": {
+    "pipeline": "notebooks/run_analysis.ipynb",
+    "environment": "code/environment.yml",
+    "status": "passing",
+    "evidence": [
+      "results/spindle-summary.csv",
+      "results/figures/spindle-density.png"
+    ]
+  },
+  "components": [
+    {
+      "path": "manuscript/main.md",
+      "mediaType": "text/markdown",
+      "content": "# Sleep Spindle Atlas\n\nWe report a reproducible spindle atlas across 120 EEG sessions.",
+      "reproducibilityRole": "narrative"
+    },
+    {
+      "path": "data/eeg-session-index.csv",
+      "mediaType": "text/csv",
+      "content": "session_id,subject_id,minutes\ns001,p001,45\ns002,p002,42\n",
+      "reproducibilityRole": "input-data"
+    },
+    {
+      "path": "code/spindle_detector.py",
+      "mediaType": "text/x-python",
+      "content": "def detect_spindles(signal):\n    return [window for window in signal if window.get('sigma_power', 0) > 0.72]\n",
+      "reproducibilityRole": "analysis-code"
+    },
+    {
+      "path": "code/environment.yml",
+      "mediaType": "application/x-yaml",
+      "content": "name: spindle-atlas\nchannels: [conda-forge]\ndependencies: [python=3.12, numpy, pandas]\n",
+      "reproducibilityRole": "environment"
+    },
+    {
+      "path": "notebooks/run_analysis.ipynb",
+      "mediaType": "application/x-ipynb+json",
+      "content": {
+        "cells": [
+          {
+            "cell_type": "code",
+            "source": "from code.spindle_detector import detect_spindles"
+          }
+        ]
+      },
+      "reproducibilityRole": "notebook"
+    },
+    {
+      "path": "results/spindle-summary.csv",
+      "mediaType": "text/csv",
+      "content": "group,mean_density\ncontrol,2.4\npatient,1.9\n",
+      "reproducibilityRole": "reported-output"
+    },
+    {
+      "path": "results/figures/spindle-density.png",
+      "mediaType": "image/png",
+      "summary": "PNG chart of spindle density by group",
+      "sizeBytes": 614400,
+      "reproducibilityRole": "reported-output"
+    },
+    {
+      "path": "protocols/eeg-acquisition.md",
+      "mediaType": "text/markdown",
+      "content": "# EEG Acquisition Protocol\n\nRecord overnight EEG with a 256 Hz sampling rate.",
+      "reproducibilityRole": "protocol"
+    },
+    {
+      "path": "metadata.json",
+      "mediaType": "application/json",
+      "content": {
+        "@type": "Dataset",
+        "name": "Sleep Spindle Atlas With Reproducible Notebook Outputs",
+        "license": "CC-BY-4.0"
+      },
+      "reproducibilityRole": "metadata"
+    }
+  ],
+  "apiRoutes": [
+    {
+      "method": "GET",
+      "path": "/api/projects/:repositoryId",
+      "scope": "project.read",
+      "public": true
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects",
+      "scope": "project.write",
+      "public": true
+    },
+    {
+      "method": "PUT",
+      "path": "/api/projects/:repositoryId",
+      "scope": "project.update",
+      "public": true
+    },
+    {
+      "method": "GET",
+      "path": "/api/projects/:repositoryId/export",
+      "scope": "export.read",
+      "public": true,
+      "includesIntegrityRoot": true
+    }
+  ]
+}

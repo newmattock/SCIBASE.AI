@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Repository API export contract demo</title>
+  <desc id="desc">A static walkthrough of the manifest, API coverage, export bundle, and CLI plan produced by the module.</desc>
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <rect x="64" y="56" width="1152" height="608" rx="12" fill="#f8fafc"/>
+  <text x="104" y="116" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111827">Repository API Export Contract</text>
+  <text x="104" y="156" font-family="Arial, sans-serif" font-size="18" fill="#475569">Programmatic access and export-bundle readiness for SCIBASE project repositories</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="104" y="204" width="500" height="150" rx="10" fill="#e0f2fe" stroke="#0284c7"/>
+    <text x="132" y="246" font-size="24" font-weight="700" fill="#075985">1. Manifest</text>
+    <text x="132" y="284" font-size="17" fill="#0f172a">Required components: manuscript, data, code, notebooks, results, protocols, metadata</text>
+    <text x="132" y="318" font-size="17" fill="#0f172a">Integrity root: sha256 over component hashes and reproducibility evidence</text>
+    <rect x="676" y="204" width="500" height="150" rx="10" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="704" y="246" font-size="24" font-weight="700" fill="#166534">2. REST API</text>
+    <text x="704" y="284" font-size="17" fill="#0f172a">Public scoped GET, POST, and PUT routes are required</text>
+    <text x="704" y="318" font-size="17" fill="#0f172a">Export route must include the manifest integrity root</text>
+    <rect x="104" y="410" width="500" height="150" rx="10" fill="#fef3c7" stroke="#d97706"/>
+    <text x="132" y="452" font-size="24" font-weight="700" fill="#92400e">3. Export Bundle</text>
+    <text x="132" y="490" font-size="17" fill="#0f172a">Includes manifest, API contract, reproducibility runbook, citation metadata, and files</text>
+    <text x="132" y="524" font-size="17" fill="#0f172a">Bundle hash signs ordered entry paths and hashes</text>
+    <rect x="676" y="410" width="500" height="150" rx="10" fill="#f3e8ff" stroke="#9333ea"/>
+    <text x="704" y="452" font-size="24" font-weight="700" fill="#6b21a8">4. CLI Workflow</text>
+    <text x="704" y="490" font-size="17" fill="#0f172a">clone, status, export, and route discovery commands</text>
+    <text x="704" y="524" font-size="17" fill="#0f172a">Designed for labs that want Git-compatible automation</text>
+  </g>
+  <text x="104" y="620" font-family="Arial, sans-serif" font-size="18" fill="#334155">Validation: npm test; npm run demo</text>
+</svg>

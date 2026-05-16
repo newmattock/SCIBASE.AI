@@ -1,0 +1,10 @@
+{
+  "name": "repository-api-export-contract",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node test/repository-api-export-contract.test.js",
+    "demo": "node scripts/demo.js"
+  }
+}
