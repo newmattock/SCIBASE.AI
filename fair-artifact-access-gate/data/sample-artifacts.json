@@ -1,0 +1,107 @@
+{
+  "projectId": "lab-astrocyte-calcium-atlas",
+  "title": "Astrocyte Calcium Imaging Atlas",
+  "doi": "10.5555/scibase.astrocyte-calcium.2026.v2",
+  "version": "2.1.0",
+  "license": "CC-BY-4.0",
+  "indexed": true,
+  "publisher": "SCIBASE Demo Repository",
+  "persistentBaseUrl": "https://scibase.ai/artifacts/lab-astrocyte-calcium-atlas",
+  "metadata": {
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "Astrocyte Calcium Imaging Atlas",
+      "identifier": "10.5555/scibase.astrocyte-calcium.2026.v2"
+    },
+    "dataCite": {
+      "identifier": "10.5555/scibase.astrocyte-calcium.2026.v2",
+      "creators": ["SCIBASE Demo Lab"],
+      "publisher": "SCIBASE Demo Repository",
+      "publicationYear": 2026,
+      "resourceType": "Dataset"
+    },
+    "schemaOrg": {
+      "name": "Astrocyte Calcium Imaging Atlas",
+      "description": "Processed calcium imaging events, notebooks, source code, model weights, and raw instrument outputs.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "distribution": "https://scibase.ai/artifacts/lab-astrocyte-calcium-atlas"
+    }
+  },
+  "tags": {
+    "keywords": ["calcium imaging", "astrocyte", "time series", "neuroscience"],
+    "instruments": ["two-photon microscope", "scientific CMOS camera"],
+    "organisms": ["Mus musculus"],
+    "variables": ["event amplitude", "event duration", "field of view", "stimulus epoch"]
+  },
+  "artifacts": [
+    {
+      "path": "data/processed/calcium-events.parquet",
+      "family": "dataset",
+      "format": "parquet",
+      "access": "public",
+      "preview": "table",
+      "versioned": true,
+      "diffable": true,
+      "machineReadable": true,
+      "sizeBytes": 9420800
+    },
+    {
+      "path": "code/notebooks/event-detection.ipynb",
+      "family": "notebook",
+      "format": "ipynb",
+      "access": "public",
+      "preview": "notebook",
+      "versioned": true,
+      "diffable": true,
+      "machineReadable": true,
+      "sizeBytes": 184220
+    },
+    {
+      "path": "code/src/extract_events.py",
+      "family": "code",
+      "format": "python",
+      "access": "public",
+      "preview": "syntax-highlight",
+      "versioned": true,
+      "diffable": true,
+      "machineReadable": true,
+      "sizeBytes": 38291
+    },
+    {
+      "path": "supplementary/figures/field-of-view.png",
+      "family": "figure",
+      "format": "png",
+      "access": "public",
+      "preview": "image",
+      "versioned": true,
+      "diffable": false,
+      "machineReadable": false,
+      "sizeBytes": 308204
+    },
+    {
+      "path": "raw/instrument/session-0423.tiff",
+      "family": "raw-instrument-output",
+      "format": "tiff",
+      "access": "restricted",
+      "restrictionReason": "contains pre-release animal cohort metadata",
+      "reviewerAccess": true,
+      "preview": "thumbnail",
+      "versioned": true,
+      "diffable": false,
+      "machineReadable": false,
+      "sizeBytes": 182002284
+    },
+    {
+      "path": "models/event-classifier.onnx",
+      "family": "model",
+      "format": "onnx",
+      "access": "public",
+      "preview": "model-card",
+      "versioned": true,
+      "diffable": false,
+      "machineReadable": true,
+      "sizeBytes": 14082112
+    }
+  ]
+}

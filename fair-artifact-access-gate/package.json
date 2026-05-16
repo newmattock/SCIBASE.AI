@@ -1,0 +1,15 @@
+{
+  "name": "fair-artifact-access-gate",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FAIR scientific artifact hosting readiness gate for SCIBASE issue #14.",
+  "type": "module",
+  "scripts": {
+    "test": "node test/fair-artifact-access-gate.test.js",
+    "demo": "node scripts/demo.js",
+    "demo:video": "clang -fobjc-arc -framework Foundation -framework AppKit -framework AVFoundation -framework CoreMedia -framework CoreVideo scripts/render-demo-video.m -o /tmp/scibase-fair-artifact-access-demo && /tmp/scibase-fair-artifact-access-demo docs/demo.mp4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
