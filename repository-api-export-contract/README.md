@@ -16,9 +16,11 @@ It builds a deterministic contract for a scientific project repository that incl
 ```bash
 npm test
 npm run demo
+npm run demo:video
 ```
 
 The demo prints the export readiness decision, bundle hash, API coverage, and CLI workflow for the sample project in `data/sample-project.json`.
+The video demo renders `docs/demo.mp4` with a four-step walkthrough of the manifest, API coverage, export bundle, and CLI workflow.
 
 ## Requirement Map
 
