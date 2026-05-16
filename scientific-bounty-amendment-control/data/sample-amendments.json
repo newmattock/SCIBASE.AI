@@ -1,0 +1,115 @@
+{
+  "generatedAt": "2026-05-16T15:05:00.000Z",
+  "challenge": {
+    "id": "challenge-bio-marker-042",
+    "title": "Single-cell biomarker discovery challenge",
+    "status": "published",
+    "registrationOpenedAt": "2026-05-01T09:00:00.000Z",
+    "submissionOpenedAt": "2026-05-10T09:00:00.000Z",
+    "submissionDueAt": "2026-05-28T23:59:00.000Z",
+    "reviewStartsAt": "2026-05-29T12:00:00.000Z",
+    "prizePoolUsd": 42000,
+    "ipPolicy": "solver_retains_until_paid",
+    "visibility": "named_finalists",
+    "requiredDeliverables": ["model-card", "reproducible-notebook", "ranked-biomarkers", "license-attestation"],
+    "rubric": {
+      "accuracy": 40,
+      "reproducibility": 25,
+      "biological-plausibility": 20,
+      "documentation": 15
+    }
+  },
+  "teams": [
+    {
+      "id": "team-atlas",
+      "name": "Atlas Cell Lab",
+      "registeredAt": "2026-05-02T12:00:00.000Z",
+      "submissionStartedAt": "2026-05-11T18:20:00.000Z",
+      "lastActiveAt": "2026-05-15T17:30:00.000Z"
+    },
+    {
+      "id": "team-orchid",
+      "name": "Orchid Systems Biology",
+      "registeredAt": "2026-05-04T16:10:00.000Z",
+      "submissionStartedAt": "2026-05-12T20:00:00.000Z",
+      "lastActiveAt": "2026-05-14T19:15:00.000Z"
+    },
+    {
+      "id": "team-quartz",
+      "name": "Quartz ML Group",
+      "registeredAt": "2026-05-08T08:40:00.000Z",
+      "submissionStartedAt": null,
+      "lastActiveAt": "2026-05-15T10:00:00.000Z"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "reviewer-chen",
+      "assignedAt": "2026-05-15T12:00:00.000Z"
+    },
+    {
+      "id": "reviewer-mbaye",
+      "assignedAt": "2026-05-15T12:05:00.000Z"
+    }
+  ],
+  "amendments": [
+    {
+      "id": "amd-deadline-shorter",
+      "requestedBy": "sponsor",
+      "requestedAt": "2026-05-16T11:00:00.000Z",
+      "effectiveAt": "2026-05-18T09:00:00.000Z",
+      "field": "submissionDueAt",
+      "before": "2026-05-28T23:59:00.000Z",
+      "after": "2026-05-22T23:59:00.000Z",
+      "justification": "Sponsor board wants winners before June budget close.",
+      "notifiedTeamIds": ["team-atlas"],
+      "acknowledgedTeamIds": []
+    },
+    {
+      "id": "amd-rubric-shift",
+      "requestedBy": "sponsor",
+      "requestedAt": "2026-05-16T11:07:00.000Z",
+      "effectiveAt": "2026-05-20T09:00:00.000Z",
+      "field": "rubric",
+      "before": {
+        "accuracy": 40,
+        "reproducibility": 25,
+        "biological-plausibility": 20,
+        "documentation": 15
+      },
+      "after": {
+        "accuracy": 30,
+        "reproducibility": 20,
+        "biological-plausibility": 40,
+        "documentation": 10
+      },
+      "justification": "Sponsor wants to emphasize biological plausibility.",
+      "notifiedTeamIds": ["team-atlas", "team-orchid", "team-quartz"],
+      "acknowledgedTeamIds": ["team-quartz"]
+    },
+    {
+      "id": "amd-ip-policy",
+      "requestedBy": "sponsor",
+      "requestedAt": "2026-05-16T12:00:00.000Z",
+      "effectiveAt": "2026-05-17T09:00:00.000Z",
+      "field": "ipPolicy",
+      "before": "solver_retains_until_paid",
+      "after": "sponsor_option_license_pre_award",
+      "justification": "Sponsor legal team requested earlier internal review rights.",
+      "notifiedTeamIds": [],
+      "acknowledgedTeamIds": []
+    },
+    {
+      "id": "amd-prize-increase",
+      "requestedBy": "sponsor",
+      "requestedAt": "2026-05-16T12:20:00.000Z",
+      "effectiveAt": "2026-05-16T13:00:00.000Z",
+      "field": "prizePoolUsd",
+      "before": 42000,
+      "after": 48000,
+      "justification": "Additional honorable mention funding approved.",
+      "notifiedTeamIds": ["team-atlas", "team-orchid", "team-quartz"],
+      "acknowledgedTeamIds": ["team-atlas", "team-orchid", "team-quartz"]
+    }
+  ]
+}

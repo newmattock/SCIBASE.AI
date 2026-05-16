@@ -1,0 +1,12 @@
+{
+  "name": "scientific-bounty-amendment-control",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "node --check src/challenge-amendment-control.js && node --check scripts/demo.js && node --check scripts/write-demo-gif.js && node --check test/challenge-amendment-control.test.js",
+    "test": "node --test test/challenge-amendment-control.test.js",
+    "demo": "node scripts/demo.js",
+    "demo:gif": "node scripts/write-demo-gif.js"
+  }
+}

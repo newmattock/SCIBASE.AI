@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Scientific bounty amendment control demo</title>
+  <desc id="desc">Dashboard preview showing material challenge amendments, solver notice gaps, evaluation holds, and signed audit evidence.</desc>
+  <rect width="960" height="540" fill="#f6f7fb"/>
+  <rect width="960" height="72" fill="#111827"/>
+  <text x="40" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="26" font-weight="700">SCIBASE Scientific Bounty Amendment Control</text>
+  <text x="40" y="108" fill="#2563eb" font-family="Arial, sans-serif" font-size="16">Single-cell biomarker discovery challenge</text>
+  <text x="40" y="148" fill="#1f2937" font-family="Arial, sans-serif" font-size="32" font-weight="700">Sponsor changes pause evaluation until solvers are protected</text>
+  <text x="40" y="184" fill="#6b7280" font-family="Arial, sans-serif" font-size="18">Deadline, rubric, prize, and IP changes produce notice packets, hold decisions, and audit digests.</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="40" y="225" width="200" height="92" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="60" y="252" fill="#6b7280" font-size="15">Amendments</text>
+    <text x="60" y="286" fill="#111827" font-size="30" font-weight="700">4</text>
+    <rect x="260" y="225" width="200" height="92" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="280" y="252" fill="#6b7280" font-size="15">Critical findings</text>
+    <text x="280" y="286" fill="#b91c1c" font-size="30" font-weight="700">2</text>
+    <rect x="480" y="225" width="200" height="92" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="500" y="252" fill="#6b7280" font-size="15">Missing notices</text>
+    <text x="500" y="286" fill="#b45309" font-size="30" font-weight="700">3</text>
+    <rect x="700" y="225" width="200" height="92" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="720" y="252" fill="#6b7280" font-size="15">Evaluation state</text>
+    <text x="720" y="286" fill="#b91c1c" font-size="30" font-weight="700">HOLD</text>
+  </g>
+  <rect x="40" y="350" width="420" height="140" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+  <text x="62" y="382" fill="#1f2937" font-family="Arial, sans-serif" font-size="21" font-weight="700">Material amendment risks</text>
+  <circle cx="88" cy="428" r="16" fill="#b91c1c"/>
+  <text x="118" y="434" fill="#374151" font-family="Arial, sans-serif" font-size="16">Submission window shortened after solver work</text>
+  <circle cx="88" cy="462" r="16" fill="#b91c1c"/>
+  <text x="118" y="468" fill="#374151" font-family="Arial, sans-serif" font-size="16">IP policy changed before payout acceptance</text>
+  <rect x="500" y="350" width="420" height="140" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+  <text x="522" y="382" fill="#1f2937" font-family="Arial, sans-serif" font-size="21" font-weight="700">Hold decisions</text>
+  <text x="522" y="424" fill="#374151" font-family="Courier New, monospace" font-size="16">evaluation: hold</text>
+  <text x="522" y="456" fill="#374151" font-family="Courier New, monospace" font-size="16">payoutReadiness: hold_until_acknowledged</text>
+</svg>
