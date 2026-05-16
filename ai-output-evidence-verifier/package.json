@@ -1,0 +1,15 @@
+{
+  "name": "ai-output-evidence-verifier",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Evidence verifier for AI-assisted research tool outputs for SCIBASE issue #13.",
+  "type": "module",
+  "scripts": {
+    "test": "node test/ai-output-evidence-verifier.test.js",
+    "demo": "node scripts/demo.js",
+    "demo:video": "clang -fobjc-arc -framework Foundation -framework AppKit -framework AVFoundation -framework CoreMedia -framework CoreVideo scripts/render-demo-video.m -o /tmp/scibase-ai-output-evidence-demo && /tmp/scibase-ai-output-evidence-demo docs/demo.mp4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "project": {
+    "id": "proj-neuro-imaging-42",
+    "title": "Neurovascular Calcium Imaging Protocol",
+    "domain": "neuroscience",
+    "reviewDate": "2026-05-16",
+    "requiredDisclosures": [
+      "ai-generated",
+      "human-review-required",
+      "source-coverage"
+    ]
+  },
+  "sources": [
+    {
+      "id": "paper-astrocyte-2025",
+      "title": "Astrocyte calcium signaling during sleep spindle propagation",
+      "type": "preprint",
+      "status": "active",
+      "publishedAt": "2025-11-20",
+      "reviewedAt": "2026-05-10",
+      "tags": ["calcium-imaging", "sleep-spindles", "two-photon"],
+      "url": "https://example.org/preprints/astrocyte-calcium-2025",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "dataset-ca-raw",
+      "title": "Raw calcium-imaging dataset and segmentation masks",
+      "type": "dataset",
+      "status": "active",
+      "publishedAt": "2026-01-12",
+      "reviewedAt": "2026-05-14",
+      "tags": ["calcium-imaging", "raw-data", "segmentation"],
+      "url": "https://example.org/datasets/ca-raw",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "paper-retired-marker",
+      "title": "Legacy glial activation marker in fixed tissue",
+      "type": "article",
+      "status": "retracted",
+      "publishedAt": "2021-03-10",
+      "reviewedAt": "2024-01-10",
+      "tags": ["fixed-tissue", "marker-panel"],
+      "url": "https://example.org/articles/retracted-marker",
+      "license": "unknown"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "summary-main",
+      "mode": "summary",
+      "audience": "collaborator",
+      "generatedAt": "2026-05-16T17:30:00Z",
+      "disclosures": ["ai-generated", "human-review-required", "source-coverage"],
+      "claims": [
+        {
+          "id": "c1",
+          "text": "Sleep spindle events correlate with astrocyte calcium transients in the sample cohort.",
+          "sourceIds": ["paper-astrocyte-2025", "dataset-ca-raw"],
+          "tags": ["calcium-imaging", "sleep-spindles"],
+          "confidence": 0.84
+        },
+        {
+          "id": "c2",
+          "text": "The analysis proves a causal glial mechanism for all sleep-stage transitions.",
+          "sourceIds": [],
+          "tags": ["causality", "sleep-stages"],
+          "confidence": 0.61
+        }
+      ]
+    },
+    {
+      "id": "peer-review-aid",
+      "mode": "peer-review",
+      "audience": "author",
+      "generatedAt": "2026-05-16T17:34:00Z",
+      "disclosures": ["ai-generated", "human-review-required"],
+      "claims": [
+        {
+          "id": "c3",
+          "text": "The marker panel is validated for fixed tissue and can be cited without caveats.",
+          "sourceIds": ["paper-retired-marker"],
+          "tags": ["marker-panel"],
+          "confidence": 0.72
+        },
+        {
+          "id": "c4",
+          "text": "The manuscript should disclose segmentation mask provenance next to the methods section.",
+          "sourceIds": ["dataset-ca-raw"],
+          "tags": ["raw-data", "segmentation"],
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "id": "citation-suggestions",
+      "mode": "citation-recommendation",
+      "audience": "editor",
+      "generatedAt": "2026-05-16T17:36:00Z",
+      "disclosures": ["ai-generated", "human-review-required", "source-coverage"],
+      "claims": [
+        {
+          "id": "c5",
+          "text": "Prioritize the calcium-imaging preprint and raw dataset in the collaborator handoff.",
+          "sourceIds": ["paper-astrocyte-2025", "dataset-ca-raw"],
+          "tags": ["citation", "handoff"],
+          "confidence": 0.88
+        }
+      ]
+    }
+  ]
+}
