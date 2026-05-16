@@ -1,0 +1,11 @@
+{
+  "name": "knowledge-graph-retraction-guard",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "node --check src/retraction-signal-guard.js && node --check scripts/demo.js && node --check test/retraction-signal-guard.test.js",
+    "test": "node --test test/retraction-signal-guard.test.js",
+    "demo": "node scripts/demo.js"
+  }
+}

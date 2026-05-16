@@ -1,0 +1,136 @@
+{
+  "generatedAt": "2026-05-16T14:30:00Z",
+  "workspace": "SCIBASE translational neuroscience graph",
+  "entities": [
+    {
+      "id": "paper-alpha",
+      "type": "paper",
+      "label": "Alpha-synuclein organoid response atlas",
+      "doi": "10.5555/alpha.2023.101",
+      "domain": "neuroscience",
+      "projectIds": ["proj-organoid-map"]
+    },
+    {
+      "id": "dataset-dopamine",
+      "type": "dataset",
+      "label": "Dopamine neuron morphology panel",
+      "doi": "10.5555/data.2024.220",
+      "domain": "neuroscience",
+      "projectIds": ["proj-organoid-map", "proj-neurochip"]
+    },
+    {
+      "id": "protocol-immunostain",
+      "type": "protocol",
+      "label": "High-throughput immunostaining v2",
+      "doi": "10.5555/protocol.2022.014",
+      "domain": "cell-biology",
+      "projectIds": ["proj-organoid-map"]
+    },
+    {
+      "id": "paper-beta",
+      "type": "paper",
+      "label": "CRISPR screen for synaptic rescue",
+      "doi": "10.5555/beta.2024.017",
+      "domain": "genomics",
+      "projectIds": ["proj-neurochip"]
+    },
+    {
+      "id": "tool-labpipe",
+      "type": "software",
+      "label": "LabPipe notebook runner",
+      "doi": "10.5555/tool.2021.002",
+      "domain": "software",
+      "projectIds": ["proj-metabolomics"]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "rel-alpha-dataset",
+      "sourceId": "paper-alpha",
+      "targetId": "dataset-dopamine",
+      "type": "uses_dataset",
+      "evidenceDoi": "10.5555/alpha.2023.101",
+      "confidence": 0.91,
+      "recommendationId": "rec-organoid-reuse"
+    },
+    {
+      "id": "rel-dataset-protocol",
+      "sourceId": "dataset-dopamine",
+      "targetId": "protocol-immunostain",
+      "type": "validated_by_protocol",
+      "evidenceDoi": "10.5555/protocol.2022.014",
+      "confidence": 0.74,
+      "recommendationId": "rec-protocol-transfer"
+    },
+    {
+      "id": "rel-beta-dataset",
+      "sourceId": "paper-beta",
+      "targetId": "dataset-dopamine",
+      "type": "cites_dataset",
+      "evidenceDoi": "10.5555/beta.2024.017",
+      "confidence": 0.82,
+      "recommendationId": "rec-crispr-collab"
+    },
+    {
+      "id": "rel-tool-dataset",
+      "sourceId": "tool-labpipe",
+      "targetId": "dataset-dopamine",
+      "type": "processes_dataset",
+      "evidenceDoi": "10.5555/tool.2021.002",
+      "confidence": 0.68,
+      "recommendationId": "rec-runner-adoption"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "rec-organoid-reuse",
+      "title": "Reuse dopamine morphology panel for organoid comparison",
+      "relationshipIds": ["rel-alpha-dataset", "rel-dataset-protocol"],
+      "audience": "project-sidebar"
+    },
+    {
+      "id": "rec-protocol-transfer",
+      "title": "Transfer immunostaining protocol into neurochip workflow",
+      "relationshipIds": ["rel-dataset-protocol"],
+      "audience": "weekly-digest"
+    },
+    {
+      "id": "rec-crispr-collab",
+      "title": "Invite CRISPR rescue team to validate morphology findings",
+      "relationshipIds": ["rel-beta-dataset"],
+      "audience": "discovery-mode"
+    },
+    {
+      "id": "rec-runner-adoption",
+      "title": "Adopt LabPipe runner for dataset refresh jobs",
+      "relationshipIds": ["rel-tool-dataset"],
+      "audience": "admin-dashboard"
+    }
+  ],
+  "publicationNotices": [
+    {
+      "doi": "10.5555/alpha.2023.101",
+      "type": "retraction",
+      "severity": "critical",
+      "publishedAt": "2026-05-12",
+      "source": "Crossmark synthetic notice",
+      "reason": "Image panel duplication invalidates primary evidence"
+    },
+    {
+      "doi": "10.5555/protocol.2022.014",
+      "type": "expression_of_concern",
+      "severity": "high",
+      "publishedAt": "2026-05-09",
+      "source": "Publisher synthetic alert",
+      "reason": "Protocol reagent concentration under investigation"
+    },
+    {
+      "doi": "10.5555/tool.2021.002",
+      "type": "correction",
+      "severity": "medium",
+      "publishedAt": "2026-05-01",
+      "source": "Software release note",
+      "reason": "Default notebook kernel version corrected"
+    }
+  ]
+}
