@@ -1,0 +1,185 @@
+{
+  "project": {
+    "id": "scibase-paper-alpha",
+    "title": "Multimodal biomarker screening draft",
+    "reviewRound": "methods-freeze"
+  },
+  "participants": [
+    {
+      "id": "u-ada",
+      "name": "Ada",
+      "role": "owner"
+    },
+    {
+      "id": "u-max",
+      "name": "Max",
+      "role": "reviewer"
+    },
+    {
+      "id": "u-rin",
+      "name": "Rin",
+      "role": "statistician"
+    }
+  ],
+  "sections": [
+    {
+      "id": "sec-introduction",
+      "title": "Introduction",
+      "filePath": "paper/introduction.md",
+      "locked": false,
+      "ownerId": "u-ada"
+    },
+    {
+      "id": "sec-methods",
+      "title": "Methods",
+      "filePath": "paper/methods.md",
+      "locked": true,
+      "ownerId": "u-ada"
+    },
+    {
+      "id": "sec-results",
+      "title": "Results",
+      "filePath": "paper/results.md",
+      "locked": true,
+      "ownerId": "u-rin"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-protocol",
+      "title": "Screening protocol v4",
+      "type": "protocol",
+      "status": "accepted"
+    },
+    {
+      "id": "src-dataset",
+      "title": "Normalized biomarker dataset",
+      "type": "dataset",
+      "status": "active"
+    },
+    {
+      "id": "src-old-preprint",
+      "title": "Withdrawn preprint",
+      "type": "article",
+      "status": "retracted"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thr-methods-blocker",
+      "title": "Resolve assay exclusion criteria",
+      "scopeType": "section",
+      "scopeId": "sec-methods",
+      "status": "open",
+      "blocking": true,
+      "ownerId": "u-ada",
+      "participantIds": ["u-ada"],
+      "updatedAt": "2026-05-08T10:15:00.000Z",
+      "pinnedSourceIds": ["src-protocol"],
+      "messages": [
+        {
+          "authorId": "u-ada",
+          "createdAt": "2026-05-08T10:15:00.000Z",
+          "body": "Need reviewer confirmation before methods freeze."
+        }
+      ]
+    },
+    {
+      "id": "thr-results-decision",
+      "title": "Accept adjusted model summary",
+      "scopeType": "section",
+      "scopeId": "sec-results",
+      "status": "resolved",
+      "blocking": false,
+      "ownerId": "u-rin",
+      "participantIds": ["u-rin", "u-max"],
+      "updatedAt": "2026-05-15T14:30:00.000Z",
+      "pinnedSourceIds": ["src-dataset"],
+      "messages": [
+        {
+          "authorId": "u-rin",
+          "createdAt": "2026-05-15T13:20:00.000Z",
+          "body": "Adjusted model is ready for the discussion section."
+        },
+        {
+          "authorId": "u-max",
+          "createdAt": "2026-05-15T14:30:00.000Z",
+          "body": "Approved with the dataset pin."
+        }
+      ]
+    },
+    {
+      "id": "thr-file-evidence",
+      "title": "Remove unsupported background citation",
+      "scopeType": "file",
+      "scopeId": "paper/introduction.md",
+      "status": "resolved",
+      "blocking": false,
+      "ownerId": "u-max",
+      "participantIds": ["u-max", "u-ada"],
+      "updatedAt": "2026-05-14T11:00:00.000Z",
+      "pinnedSourceIds": ["src-old-preprint"],
+      "messages": [
+        {
+          "authorId": "u-max",
+          "createdAt": "2026-05-14T11:00:00.000Z",
+          "body": "This source should not survive export."
+        }
+      ]
+    },
+    {
+      "id": "thr-orphan-sidebar",
+      "title": "Unattached sidebar note",
+      "scopeType": "section",
+      "scopeId": "sec-supplement",
+      "status": "open",
+      "blocking": false,
+      "ownerId": "u-max",
+      "participantIds": ["u-max"],
+      "updatedAt": "2026-05-16T10:00:00.000Z",
+      "pinnedSourceIds": ["src-dataset"],
+      "messages": [
+        {
+          "authorId": "u-max",
+          "createdAt": "2026-05-16T10:00:00.000Z",
+          "body": "This note should be reattached before export."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "id": "dec-results-adjusted",
+      "threadId": "thr-results-decision",
+      "scopeId": "sec-results",
+      "topicKey": "model-summary",
+      "status": "accepted",
+      "summary": "Use adjusted model summary in Results.",
+      "decidedBy": "u-max",
+      "decidedAt": "2026-05-15T14:30:00.000Z",
+      "sourceIds": ["src-dataset"]
+    },
+    {
+      "id": "dec-results-conflict",
+      "threadId": "thr-results-decision",
+      "scopeId": "sec-results",
+      "topicKey": "model-summary",
+      "status": "accepted",
+      "summary": "Use unadjusted model summary instead.",
+      "decidedBy": "u-rin",
+      "decidedAt": "2026-05-15T14:45:00.000Z",
+      "sourceIds": ["src-dataset"]
+    },
+    {
+      "id": "dec-methods-draft",
+      "threadId": "thr-methods-blocker",
+      "scopeId": "sec-methods",
+      "topicKey": "exclusion-criteria",
+      "status": "proposed",
+      "summary": "Draft exclusion text until reviewer approval arrives.",
+      "decidedBy": "u-ada",
+      "decidedAt": "2026-05-08T10:20:00.000Z",
+      "sourceIds": []
+    }
+  ]
+}

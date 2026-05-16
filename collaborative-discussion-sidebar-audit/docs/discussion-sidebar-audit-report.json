@@ -1,0 +1,196 @@
+{
+  "ready": false,
+  "project": {
+    "id": "scibase-paper-alpha",
+    "title": "Multimodal biomarker screening draft",
+    "reviewRound": "methods-freeze"
+  },
+  "counts": {
+    "sections": 3,
+    "threads": 4,
+    "decisions": 3,
+    "blockers": 5,
+    "warnings": 3,
+    "reviewerTasks": 1
+  },
+  "sidebarCoverage": {
+    "scopedSections": 3,
+    "totalSections": 3,
+    "resolvedThreads": 2,
+    "totalThreads": 4,
+    "pinnedSources": 3,
+    "unscopedThreads": 1
+  },
+  "findings": [
+    {
+      "severity": "blocker",
+      "code": "open-blocker",
+      "message": "Thread thr-methods-blocker is marked blocking and is still open.",
+      "context": {
+        "threadId": "thr-methods-blocker"
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "stale-thread",
+      "message": "Thread thr-methods-blocker has been idle for 8 days.",
+      "context": {
+        "threadId": "thr-methods-blocker",
+        "staleDays": 8
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "locked-section-missing-review-role",
+      "message": "Thread thr-methods-blocker on locked section sec-methods is missing reviewer participation.",
+      "context": {
+        "threadId": "thr-methods-blocker",
+        "sectionId": "sec-methods",
+        "missingRoles": [
+          "reviewer"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "locked-section-missing-review-role",
+      "message": "Thread thr-results-decision on locked section sec-results is missing owner participation.",
+      "context": {
+        "threadId": "thr-results-decision",
+        "sectionId": "sec-results",
+        "missingRoles": [
+          "owner"
+        ]
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "unsafe-pinned-source",
+      "message": "Thread thr-file-evidence pins retracted source src-old-preprint.",
+      "context": {
+        "threadId": "thr-file-evidence",
+        "sourceId": "src-old-preprint",
+        "sourceStatus": "retracted"
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "unknown-scope",
+      "message": "Thread thr-orphan-sidebar is attached to an unknown section scope.",
+      "context": {
+        "threadId": "thr-orphan-sidebar",
+        "scopeId": "sec-supplement"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "decision-missing-source",
+      "message": "Decision dec-methods-draft has no pinned source evidence.",
+      "context": {
+        "decisionId": "dec-methods-draft"
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "conflicting-decisions",
+      "message": "Multiple active decisions compete for sec-results:model-summary.",
+      "context": {
+        "decisionIds": [
+          "dec-results-adjusted",
+          "dec-results-conflict"
+        ]
+      }
+    }
+  ],
+  "reviewerTasks": [
+    {
+      "id": "thr-methods-blocker:resolve-blocker",
+      "threadId": "thr-methods-blocker",
+      "ownerId": "u-ada",
+      "title": "Resolve blocker: Resolve assay exclusion criteria",
+      "priority": "high"
+    }
+  ],
+  "exportPacket": {
+    "generatedAt": "2026-05-16T17:00:00.000Z",
+    "packetHash": "ebc3395f938f09def2f2aaa386b8e119a7c73314f3d7331e04e486b7a5fb638f",
+    "auditDigest": "scibase-paper-alpha:5:3:1:ebc3395f938f",
+    "entries": [
+      {
+        "threadId": "thr-file-evidence",
+        "title": "Remove unsupported background citation",
+        "scopeType": "file",
+        "scopeId": "paper/introduction.md",
+        "sectionTitle": "Introduction",
+        "status": "resolved",
+        "blocking": false,
+        "ownerId": "u-max",
+        "participantIds": [
+          "u-ada",
+          "u-max"
+        ],
+        "pinnedSourceIds": [
+          "src-old-preprint"
+        ],
+        "decisionIds": []
+      },
+      {
+        "threadId": "thr-methods-blocker",
+        "title": "Resolve assay exclusion criteria",
+        "scopeType": "section",
+        "scopeId": "sec-methods",
+        "sectionTitle": "Methods",
+        "status": "open",
+        "blocking": true,
+        "ownerId": "u-ada",
+        "participantIds": [
+          "u-ada"
+        ],
+        "pinnedSourceIds": [
+          "src-protocol"
+        ],
+        "decisionIds": [
+          "dec-methods-draft"
+        ]
+      },
+      {
+        "threadId": "thr-orphan-sidebar",
+        "title": "Unattached sidebar note",
+        "scopeType": "section",
+        "scopeId": "sec-supplement",
+        "sectionTitle": null,
+        "status": "open",
+        "blocking": false,
+        "ownerId": "u-max",
+        "participantIds": [
+          "u-max"
+        ],
+        "pinnedSourceIds": [
+          "src-dataset"
+        ],
+        "decisionIds": []
+      },
+      {
+        "threadId": "thr-results-decision",
+        "title": "Accept adjusted model summary",
+        "scopeType": "section",
+        "scopeId": "sec-results",
+        "sectionTitle": "Results",
+        "status": "resolved",
+        "blocking": false,
+        "ownerId": "u-rin",
+        "participantIds": [
+          "u-max",
+          "u-rin"
+        ],
+        "pinnedSourceIds": [
+          "src-dataset"
+        ],
+        "decisionIds": [
+          "dec-results-adjusted",
+          "dec-results-conflict"
+        ]
+      }
+    ]
+  }
+}

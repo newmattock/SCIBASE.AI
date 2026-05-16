@@ -1,0 +1,15 @@
+{
+  "name": "collaborative-discussion-sidebar-audit",
+  "version": "1.0.0",
+  "description": "Section-scoped discussion sidebar audit tools for a collaborative research editor.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node test/collaborative-discussion-sidebar-audit.test.js",
+    "demo": "node scripts/demo.js",
+    "demo:video": "mkdir -p docs && clang -fobjc-arc -framework Foundation -framework AppKit -framework AVFoundation -framework CoreMedia -framework CoreVideo scripts/render-demo-video.m -o /tmp/discussion-sidebar-demo && /tmp/discussion-sidebar-demo docs/demo.mp4"
+  },
+  "exports": {
+    ".": "./src/collaborative-discussion-sidebar-audit.js"
+  }
+}
