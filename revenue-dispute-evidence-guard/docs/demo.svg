@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Revenue dispute evidence guard demo</title>
+  <desc id="desc">Dashboard preview showing revenue at risk, evidence packets, entitlement holds, and finance actions.</desc>
+  <rect width="960" height="540" fill="#f6f7fb"/>
+  <rect width="960" height="72" fill="#111827"/>
+  <text x="40" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="26" font-weight="700">SCIBASE Revenue Dispute Evidence Guard</text>
+  <text x="40" y="108" fill="#2563eb" font-family="Arial, sans-serif" font-size="16">Northbridge Research Cloud</text>
+  <text x="40" y="148" fill="#1f2937" font-family="Arial, sans-serif" font-size="32" font-weight="700">Payment risk becomes recovery evidence</text>
+  <text x="40" y="184" fill="#6b7280" font-family="Arial, sans-serif" font-size="18">Chargebacks, short-payments, and failed funding pause entitlements until evidence packets are ready.</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="40" y="225" width="200" height="92" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="60" y="252" fill="#6b7280" font-size="15">Revenue at risk</text>
+    <text x="60" y="286" fill="#b91c1c" font-size="30" font-weight="700">$17.4k</text>
+    <rect x="260" y="225" width="200" height="92" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="280" y="252" fill="#6b7280" font-size="15">Findings</text>
+    <text x="280" y="286" fill="#b91c1c" font-size="30" font-weight="700">3</text>
+    <rect x="480" y="225" width="200" height="92" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="500" y="252" fill="#6b7280" font-size="15">Held entitlements</text>
+    <text x="500" y="286" fill="#7c3aed" font-size="30" font-weight="700">1</text>
+    <rect x="700" y="225" width="200" height="92" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="720" y="252" fill="#6b7280" font-size="15">Limited entitlements</text>
+    <text x="720" y="286" fill="#b45309" font-size="30" font-weight="700">2</text>
+  </g>
+  <rect x="40" y="350" width="420" height="140" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+  <text x="62" y="382" fill="#1f2937" font-family="Arial, sans-serif" font-size="21" font-weight="700">Packet readiness</text>
+  <circle cx="88" cy="428" r="16" fill="#b91c1c"/>
+  <text x="118" y="434" fill="#374151" font-family="Arial, sans-serif" font-size="16">Stripe dispute missing service acceptance</text>
+  <circle cx="88" cy="462" r="16" fill="#b45309"/>
+  <text x="118" y="468" fill="#374151" font-family="Arial, sans-serif" font-size="16">Institutional invoice missing PO and PDF</text>
+  <rect x="500" y="350" width="420" height="140" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+  <text x="522" y="382" fill="#1f2937" font-family="Arial, sans-serif" font-size="21" font-weight="700">Finance actions</text>
+  <text x="522" y="424" fill="#374151" font-family="Courier New, monospace" font-size="16">assemble_dispute_packet</text>
+  <text x="522" y="456" fill="#374151" font-family="Courier New, monospace" font-size="16">pause_provisioning_and_retry_payment</text>
+</svg>

@@ -1,0 +1,11 @@
+{
+  "name": "revenue-dispute-evidence-guard",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "node --check src/dispute-evidence-guard.js && node --check scripts/demo.js && node --check test/dispute-evidence-guard.test.js",
+    "test": "node --test test/dispute-evidence-guard.test.js",
+    "demo": "node scripts/demo.js"
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "generatedAt": "2026-05-16T14:45:00Z",
+  "organization": "Northbridge Research Cloud",
+  "customers": [
+    {
+      "id": "cust-lab-a",
+      "name": "Atlas Organoid Lab",
+      "tier": "lab",
+      "accountOwner": "Maya Patel",
+      "billingEmail": "billing+atlas@example.edu"
+    },
+    {
+      "id": "cust-institute-b",
+      "name": "Helix Institute Consortium",
+      "tier": "institution",
+      "accountOwner": "Evan Brooks",
+      "billingEmail": "ap+helix@example.org"
+    },
+    {
+      "id": "cust-analyst-c",
+      "name": "Quanta Policy Analytics",
+      "tier": "licensing",
+      "accountOwner": "Lena Ross",
+      "billingEmail": "finance+quanta@example.net"
+    }
+  ],
+  "invoices": [
+    {
+      "id": "inv-1001",
+      "customerId": "cust-lab-a",
+      "amountUsd": 2400,
+      "issuedAt": "2026-04-28",
+      "dueAt": "2026-05-12",
+      "status": "paid",
+      "lineItems": ["lab_subscription", "ai_compute_topup"]
+    },
+    {
+      "id": "inv-1002",
+      "customerId": "cust-institute-b",
+      "amountUsd": 9800,
+      "issuedAt": "2026-04-20",
+      "dueAt": "2026-05-10",
+      "status": "short_paid",
+      "lineItems": ["institution_license", "priority_support"]
+    },
+    {
+      "id": "inv-1003",
+      "customerId": "cust-analyst-c",
+      "amountUsd": 5200,
+      "issuedAt": "2026-05-01",
+      "dueAt": "2026-05-15",
+      "status": "open",
+      "lineItems": ["analytics_api_license"]
+    }
+  ],
+  "payments": [
+    {
+      "id": "pay-778",
+      "invoiceId": "inv-1001",
+      "rail": "stripe",
+      "amountUsd": 2400,
+      "status": "disputed",
+      "disputeReason": "fraudulent",
+      "disputeDueAt": "2026-05-18",
+      "evidence": ["signed_order_form", "seat_login_history", "compute_usage_log", "receipt_email"],
+      "requiredEvidence": ["signed_order_form", "service_acceptance", "seat_login_history", "compute_usage_log", "receipt_email"]
+    },
+    {
+      "id": "pay-812",
+      "invoiceId": "inv-1002",
+      "rail": "institutional_invoice",
+      "amountUsd": 7600,
+      "status": "short_paid",
+      "disputeReason": "missing_purchase_order",
+      "disputeDueAt": "2026-05-17",
+      "evidence": ["signed_order_form", "usage_report"],
+      "requiredEvidence": ["signed_order_form", "purchase_order", "usage_report", "invoice_pdf"]
+    },
+    {
+      "id": "pay-845",
+      "invoiceId": "inv-1003",
+      "rail": "paypal",
+      "amountUsd": 0,
+      "status": "failed",
+      "disputeReason": "funding_source_declined",
+      "disputeDueAt": "2026-05-20",
+      "evidence": ["invoice_pdf"],
+      "requiredEvidence": ["invoice_pdf", "license_delivery_log", "api_access_log"]
+    }
+  ],
+  "entitlements": [
+    {
+      "id": "ent-lab-a-compute",
+      "customerId": "cust-lab-a",
+      "invoiceId": "inv-1001",
+      "kind": "ai_compute_topup",
+      "monthlyValueUsd": 900,
+      "status": "active"
+    },
+    {
+      "id": "ent-institute-b-license",
+      "customerId": "cust-institute-b",
+      "invoiceId": "inv-1002",
+      "kind": "institution_license",
+      "monthlyValueUsd": 6200,
+      "status": "active"
+    },
+    {
+      "id": "ent-analyst-c-api",
+      "customerId": "cust-analyst-c",
+      "invoiceId": "inv-1003",
+      "kind": "analytics_api_license",
+      "monthlyValueUsd": 5200,
+      "status": "provisioning"
+    }
+  ],
+  "usageEvents": [
+    {
+      "customerId": "cust-lab-a",
+      "invoiceId": "inv-1001",
+      "kind": "ai_inference_hours",
+      "quantity": 330,
+      "recordedAt": "2026-05-11"
+    },
+    {
+      "customerId": "cust-institute-b",
+      "invoiceId": "inv-1002",
+      "kind": "institution_active_seats",
+      "quantity": 180,
+      "recordedAt": "2026-05-12"
+    },
+    {
+      "customerId": "cust-analyst-c",
+      "invoiceId": "inv-1003",
+      "kind": "analytics_api_queries",
+      "quantity": 24000,
+      "recordedAt": "2026-05-13"
+    }
+  ]
+}
