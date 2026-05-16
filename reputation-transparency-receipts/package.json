@@ -1,0 +1,11 @@
+{
+  "name": "reputation-transparency-receipts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/reputation-transparency-receipts.js && node --check scripts/demo.js && node --check test/reputation-transparency-receipts.test.js",
+    "test": "node --test test/reputation-transparency-receipts.test.js",
+    "demo": "node scripts/demo.js"
+  }
+}

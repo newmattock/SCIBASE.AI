@@ -1,0 +1,132 @@
+{
+  "generatedAt": "2026-05-16T15:20:00.000Z",
+  "community": "SCIBASE beta contributor community",
+  "users": [
+    {
+      "id": "usr-ada",
+      "handle": "Ada Chen",
+      "domain": "biology",
+      "institution": "North Lab",
+      "lastActiveAt": "2026-05-15T12:00:00.000Z"
+    },
+    {
+      "id": "usr-ben",
+      "handle": "Ben Ortiz",
+      "domain": "biology",
+      "institution": "North Lab",
+      "lastActiveAt": "2026-05-01T09:00:00.000Z"
+    },
+    {
+      "id": "usr-cora",
+      "handle": "Cora Singh",
+      "domain": "physics",
+      "institution": "River Institute",
+      "lastActiveAt": "2026-04-28T18:00:00.000Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev-manuscript-1",
+      "reviewerId": "usr-ada",
+      "projectId": "proj-organoid-map",
+      "mode": "public",
+      "scores": {
+        "clarity": 4.4,
+        "rigor": 4.7,
+        "novelty": 4.1,
+        "reproducibility": 4.6
+      },
+      "evidenceLinks": ["claim-2", "dataset-v3", "notebook-run-17"],
+      "commentAnchors": ["methods:line-42", "results:figure-2"],
+      "createdAt": "2026-05-12T08:00:00.000Z"
+    },
+    {
+      "id": "rev-doubleblind-7",
+      "reviewerId": "usr-ben",
+      "projectId": "proj-neurochip",
+      "mode": "double_blind",
+      "visibleTo": ["editor-board"],
+      "scores": {
+        "clarity": 4.9,
+        "rigor": 4.8,
+        "novelty": 4.8,
+        "reproducibility": 4.7
+      },
+      "evidenceLinks": ["protocol-9"],
+      "commentAnchors": ["discussion:limitation-1"],
+      "createdAt": "2026-05-11T17:30:00.000Z"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "cred-001",
+      "userId": "usr-ada",
+      "projectId": "proj-organoid-map",
+      "creditRole": "data_curation",
+      "artifactIds": ["dataset-v3", "schema-v2"],
+      "verifiedBy": "editor-board",
+      "createdAt": "2026-05-08T10:00:00.000Z"
+    },
+    {
+      "id": "cred-002",
+      "userId": "usr-cora",
+      "projectId": "proj-neurochip",
+      "creditRole": "software",
+      "artifactIds": ["analysis-cli", "notebook-run-17"],
+      "verifiedBy": "editor-board",
+      "createdAt": "2026-05-09T10:00:00.000Z"
+    },
+    {
+      "id": "cred-003",
+      "userId": "usr-ben",
+      "projectId": "proj-neurochip",
+      "creditRole": "peer_review",
+      "artifactIds": ["rev-doubleblind-7"],
+      "createdAt": "2026-05-11T17:45:00.000Z"
+    }
+  ],
+  "endorsements": [
+    {
+      "id": "end-001",
+      "fromUserId": "usr-ben",
+      "toUserId": "usr-ada",
+      "projectId": "proj-organoid-map",
+      "reason": "High quality methods review",
+      "createdAt": "2026-05-13T10:00:00.000Z"
+    },
+    {
+      "id": "end-002",
+      "fromUserId": "usr-cora",
+      "toUserId": "usr-ada",
+      "projectId": "proj-organoid-map",
+      "reason": "Reusable dataset curation",
+      "createdAt": "2026-05-13T11:00:00.000Z"
+    },
+    {
+      "id": "end-003",
+      "fromUserId": "usr-ben",
+      "toUserId": "usr-ben",
+      "projectId": "proj-neurochip",
+      "reason": "Self boost",
+      "createdAt": "2026-05-13T12:00:00.000Z"
+    }
+  ],
+  "reproducibilityBadges": [
+    {
+      "id": "badge-organoid-replay",
+      "userId": "usr-cora",
+      "projectId": "proj-organoid-map",
+      "verified": true,
+      "verifiedAt": "2026-05-14T15:00:00.000Z"
+    }
+  ],
+  "bountyCompletions": [
+    {
+      "id": "bounty-peer-review-template",
+      "userId": "usr-ada",
+      "projectId": "proj-organoid-map",
+      "amount": 150,
+      "verified": true
+    }
+  ]
+}
