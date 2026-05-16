@@ -1,0 +1,11 @@
+{
+  "name": "enterprise-lab-inventory-sync",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/lab-inventory-sync.js && node --check scripts/demo.js && node --check test/lab-inventory-sync.test.js",
+    "test": "node --test test/lab-inventory-sync.test.js",
+    "demo": "node scripts/demo.js"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "generatedAt": "2026-05-16T14:00:00Z",
+  "institution": "Northbridge Translational Research",
+  "labs": [
+    {
+      "id": "lab-genomics",
+      "name": "Genomics Core",
+      "department": "Molecular Biology"
+    },
+    {
+      "id": "lab-imaging",
+      "name": "Imaging Core",
+      "department": "Bioengineering"
+    }
+  ],
+  "integrations": [
+    {
+      "system": "Benchling ELN",
+      "kind": "eln",
+      "status": "healthy",
+      "lastSyncAt": "2026-05-16T13:45:00Z",
+      "queueDepth": 2
+    },
+    {
+      "system": "Quartzy Inventory",
+      "kind": "inventory",
+      "status": "degraded",
+      "lastSyncAt": "2026-05-15T10:30:00Z",
+      "queueDepth": 97
+    },
+    {
+      "system": "Agilent OpenLab",
+      "kind": "instrument",
+      "status": "failed",
+      "lastSyncAt": "2026-05-14T08:00:00Z",
+      "queueDepth": 211
+    }
+  ],
+  "instruments": [
+    {
+      "id": "inst-hplc-01",
+      "name": "HPLC 01",
+      "labId": "lab-genomics",
+      "status": "online",
+      "calibrationDue": "2026-05-10",
+      "maintenanceDue": "2026-06-02",
+      "linkedEln": true,
+      "reservations": [
+        {
+          "projectId": "proj-metabolomics",
+          "startsAt": "2026-05-17T09:00:00Z",
+          "endsAt": "2026-05-17T11:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "inst-confocal-02",
+      "name": "Confocal Microscope 02",
+      "labId": "lab-imaging",
+      "status": "offline",
+      "calibrationDue": "2026-06-30",
+      "maintenanceDue": "2026-05-18",
+      "linkedEln": false,
+      "reservations": [
+        {
+          "projectId": "proj-organoid-map",
+          "startsAt": "2026-05-17T10:00:00Z",
+          "endsAt": "2026-05-17T12:00:00Z"
+        },
+        {
+          "projectId": "proj-neurochip",
+          "startsAt": "2026-05-17T11:30:00Z",
+          "endsAt": "2026-05-17T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "inst-sequencer-03",
+      "name": "Bench Sequencer 03",
+      "labId": "lab-genomics",
+      "status": "online",
+      "calibrationDue": "2026-06-08",
+      "maintenanceDue": "2026-08-01",
+      "linkedEln": true,
+      "reservations": []
+    }
+  ],
+  "reagents": [
+    {
+      "id": "rgnt-antibody-a",
+      "name": "Anti-CD31 antibody",
+      "lot": "A-114",
+      "labId": "lab-imaging",
+      "expiresAt": "2026-05-12",
+      "quantity": 3,
+      "unit": "vial",
+      "projectIds": ["proj-organoid-map"]
+    },
+    {
+      "id": "rgnt-buffer-b",
+      "name": "LC-MS Buffer B",
+      "lot": "B-331",
+      "labId": "lab-genomics",
+      "expiresAt": "2026-05-23",
+      "quantity": 12,
+      "unit": "bottle",
+      "projectIds": ["proj-metabolomics"]
+    },
+    {
+      "id": "rgnt-enzyme-c",
+      "name": "Library prep enzyme mix",
+      "lot": "C-515",
+      "labId": "lab-genomics",
+      "expiresAt": "2026-07-01",
+      "quantity": 1,
+      "unit": "kit",
+      "projectIds": ["proj-neurochip"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-metabolomics",
+      "title": "Metabolomics biomarker screen",
+      "owner": "Dr. Imani Patel",
+      "exportDue": "2026-05-25",
+      "requiredInstrumentIds": ["inst-hplc-01"],
+      "requiredReagentIds": ["rgnt-buffer-b"]
+    },
+    {
+      "id": "proj-organoid-map",
+      "title": "Organoid vascular imaging map",
+      "owner": "Dr. Theo Bennett",
+      "exportDue": "2026-05-19",
+      "requiredInstrumentIds": ["inst-confocal-02"],
+      "requiredReagentIds": ["rgnt-antibody-a"]
+    },
+    {
+      "id": "proj-neurochip",
+      "title": "Neurochip electrophysiology pilot",
+      "owner": "Dr. Hana Okafor",
+      "exportDue": "2026-06-04",
+      "requiredInstrumentIds": ["inst-confocal-02", "inst-sequencer-03"],
+      "requiredReagentIds": ["rgnt-enzyme-c"]
+    }
+  ]
+}
